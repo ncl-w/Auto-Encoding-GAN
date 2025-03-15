@@ -1,6 +1,8 @@
 # Auto-Encoding-GAN
+Paper: [Auto-Encoding Generative Adversarial Networks towards Mode Collapse Reduction and Feature Representation Enhancement](https://doi.org/10.3390/e25121657)
+Paper GitHub Repo: https://github.com/luxiaoxiang0002/Auto-Encoding-GAN/tree/master
 
-## Reproduction of 4.2. Experiments on Synthetic Datasets
+## 4.2. Experiments on Synthetic Datasets
 Since the data and network size is relatively small for this section, I decided to run it locally. This project was originally designed for **Intel-based Windows/Linux machines** with **CUDA acceleration**. Since I am using a **MacBook Air (M3, 2024)**, I made the following key modifications:  
 
 1. **Switched from CUDA to Metal (MPS)** – CUDA is not available on Apple Silicon, so I replaced CUDA-related operations with `torch.backends.mps`.  
@@ -19,29 +21,53 @@ Since the data and network size is relatively small for this section, I decided 
 ### ⚡️ PyTorch & MPS Acceleration
 - **Backend:** Metal (MPS)
 - **CUDA:** Not Available
-- **Check MPS Support:**  
+- **Check MPS Support(should be True):**  
   ```bash
   python -c "import torch; print(torch.backends.mps.is_available())"
   ```
+  
+### 🐍 **Python & Virtual Environment Setup**  
+To reproduce this environment, follow these steps:  
 
+1️⃣ **Create a Conda Virtual Environment**  
+```bash
+conda create -n research_env python=3.9
+conda activate research_env
+```
+2️⃣ **Install Dependencies**  
+```bash
+pip install -r requirements.txt
+```
 
+## 4.3. Experiments on Image Datasets
+TODO
 
+## 📂 File Explanation
 
-## README FROM ORIGINAL PAPER
-1、本代码涉及的论文：  
-Auto-Encoding Generative Adversarial Networks Towards Mode Collapse Reduction and Feature Representation Enhancement  
-
-2、本代码需要运行的环境：  
-处理器：13th Gen Intel(R) Core(TM) i7-13700H   2.40 GHz  
-内存：16.0 GB (15.7 GB 可用)  
-系统：	64 位操作系统, 基于 x64 的处理器  
-
-3、本代码提供了二维数据集和图像数据集模mnist的样例代码。  
-AE_GAN_two:二维数据集的样例代码。  
-AE_GAN_mnist:二维数据集的样例代码。  
-dataset:论文涉及的二维数据集。  
-R15_images:文件中包括：二维数据集R15生成数据的模式覆盖结果和模型文件。  
-mnist_images:文件中包括：图像数据集mnist生成数据的模式覆盖结果和模型文件。  
-requirement.txt:代码运行需要安装的python包。
+- **AE_GAN_two.py** – Example code for 2D dataset experiments.
+- **AE_GAN_mnist.py** – Example code for the MNIST dataset experiments.
+- **dataset/** – Contains the 2D datasets used in the paper.
+- **Aggregation_images/**:
+  - The mode coverage results of the generated data for the **Aggregation** 2D dataset.
+  - Model files, classification images, learning curve plot
+- **Aggregation_images_GMM/**:
+  - The mode coverage results of the generated data for the **Aggregation** 2D dataset for AE-GAN with **GMM**.
+  - Model files, classification images, learning curve plot
+- **R15_images/**:
+  - The mode coverage results of the generated data for the **R15** 2D dataset.
+  - Model files, classification images, learning curve plot
+- **R15_images_GMM/**:
+  - The mode coverage results of the generated data for the **R15** 2D dataset for AE-GAN with **GMM**.
+  - Model files, classification images, learning curve plot
+-  **S1_images/**:
+  - The mode coverage results of the generated data for the **S1** 2D dataset for AE-GAN with **GMM**.
+  - Model files, classification images, learning curve plot
+- **S1_images_GMM/**:
+  - The mode coverage results of the generated data for the **S1** 2D dataset.
+  - Model files, classification images, learning curve plot
+- **mnist_images/**:
+  - The mode coverage results of the generated data for the **MNIST** image dataset.
+  - Model files.
+- **requirements.txt** – List of Python packages required to run the code.
 
 
