@@ -1,0 +1,14 @@
+Starting AE-GAN training with PCM for Aggregation at 2025-03-15 22:40:35.216948
+Training completed for Aggregation at 2025-03-15 22:45:30.742656
+Duration (seconds): 295.53
+--------------------------------------------------
+Starting AE-GAN training with PCM for S1 at 2025-03-15 22:45:30.742943
+Error occurred while training on S1 at 2025-03-15 22:45:33.562249
+Duration before error (seconds): 2.82
+--------------------------------------------------
+Starting AE-GAN training with PCM for R15 at 2025-03-15 22:45:33.562590
+Training completed for R15 at 2025-03-15 22:55:16.313766
+Duration (seconds): 582.75
+--------------------------------------------------
+All dataset training runs completed!
+
