@@ -36,9 +36,19 @@ conda activate research_env
 ```
 2️⃣ **Install Dependencies**  
 ```bash
-pip install -r requirements.txt
+pip install certifi==2023.7.22 charset-normalizer==3.3.2 contourpy==1.0.7 \
+cycler==0.11.0 filelock==3.13.1 fonttools==4.39.4 fsspec==2023.10.0 idna==3.4 \
+importlib_resources==6.5.2 Jinja2==3.1.2 joblib==1.2.0 kiwisolver==1.4.4 \
+llvmlite==0.40.1 MarkupSafe==2.1.3 matplotlib==3.7.1 mpmath==1.3.0 networkx==3.2.1 \
+numba==0.57.0 numpy==1.24.3 packaging==23.1 pandas==2.0.2 Pillow==9.5.0 \
+pyparsing==3.0.9 python-dateutil==2.8.2 pytz==2023.3 requests==2.31.0 \
+scikit-learn==1.2.2 scipy==1.10.1 six==1.16.0 sympy==1.13.1 threadpoolctl==3.1.0 \
+torch==2.6.0 torchaudio==2.6.0 torchvision==0.21.0 typing_extensions==4.12.2 \
+tzdata==2023.3 urllib3==2.0.7 zipp==3.21.0
 ```
-
+```bash
+pip install brotli unicodedata2
+```
 ## 4.3. Experiments on Image Datasets
 TODO
 
