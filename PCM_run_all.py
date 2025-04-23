@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 
 LOG_FILENAME = "PCM_run_all.log"
-datasets = ["Aggregation", "S1", "R15"]
+datasets = ["S1"]
 
 def log_message(message):
     """
